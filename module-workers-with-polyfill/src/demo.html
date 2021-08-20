@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sourcegraph extensions web worker demo</title>
+  </head>
+  <body>
+    <h1>Sourcegraph extensions web worker demo</h1>
+    <script src="./module-worker-polyfill.js"></script>
+    <script>
+      console.log("main thread init");
+
+      const worker = new Worker("/worker.js", { type: "module" });
+    </script>
+  </body>
+</html>
