@@ -1,4 +1,7 @@
 "use-strict";
 console.log("hey");
 
-new Worker("worker.js");
+// Simulate time between preload and parsing/executing web app
+setTimeout(() => {
+  new Worker("worker.js");
+}, 2000);
